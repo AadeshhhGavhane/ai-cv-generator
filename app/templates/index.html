@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI CV Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </div>
+        </label>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>AI CV Generator</h1>
+            <p class="subtitle">Powered by Gemini 2.0 Flash</p>
+        </header>
+
+        <main>
+            <div class="cv-form">
+                <div class="chat-container" id="chatContainer">
+                    <div class="message system">
+                        <div class="message-content">
+                            <p>Hi there! I'll help you create a professional CV. Just tell me about your education, work experience, skills, and any other details you'd like to include.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <form id="userInputForm">
+                    <div class="input-group">
+                        <textarea id="userInput" placeholder="Tell me about your experience, education, skills..." required></textarea>
+                        <button type="submit" id="submitBtn">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="result-container hidden" id="resultContainer">
+                <div class="result-header">
+                    <h2>Your CV is Ready!</h2>
+                    <p>Click the buttons below to download your CV</p>
+                </div>
+                <div class="download-buttons">
+                    <button id="downloadTex" class="download-btn">
+                        <i class="fas fa-file-code"></i> Download LaTeX
+                    </button>
+                    <button id="downloadPdf" class="download-btn">
+                        <i class="fas fa-file-pdf"></i> Download PDF
+                    </button>
+                </div>
+                <button id="newCvBtn" class="new-cv-btn">Create New CV</button>
+            </div>
+            
+            <div class="loading-container hidden" id="loadingContainer">
+                <div class="loader"></div>
+                <p>Generating your CV... This may take a few moments.</p>
+                <p class="pdf-note">Note: PDF generation requires LaTeX to be installed on the server. If unavailable, you can still download the LaTeX file.</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', path='/js/main.js') }}"></script>
+</body>
+</html> 
