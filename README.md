@@ -1,6 +1,6 @@
 # AI-Powered CV Generator
 
-A web-based CV generator that creates beautiful LaTeX-based resumes using Google's Gemini 1.5 Flash API. Simply input your details in a chat-like interface, and the AI will generate a professional CV for you, available for download as both LaTeX and PDF.
+A web-based CV generator that creates beautiful LaTeX-based resumes using Google's Gemini 2.0 Flash API. Simply input your details in a chat-like interface, and the AI will generate a professional CV for you, available for download as both LaTeX and PDF.
 
 ## Features
 
@@ -14,7 +14,7 @@ A web-based CV generator that creates beautiful LaTeX-based resumes using Google
 
 - **Frontend**: HTML, CSS, JavaScript (Neo Brutalism Theme)
 - **Backend**: FastAPI (Python)
-- **AI Integration**: Google Gemini 1.5 Flash API
+- **AI Integration**: Google Gemini 2.0 Flash API
 - **Document Processing**: LaTeX + PDF Generation
 
 ## Installation
@@ -29,7 +29,7 @@ A web-based CV generator that creates beautiful LaTeX-based resumes using Google
   
   > **Note**: If LaTeX is not installed, the application will still work but will only generate .tex files (no PDF generation).
   
-- Google Gemini API key ([Get it here](https://ai.google.dev/))
+- Google Gemini API key ([Get it here](https://aistudio.google.com/))
 
 ### Setup
 
